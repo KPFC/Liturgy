@@ -1,0 +1,793 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% COMPILE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\nonstopmode
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% USEPACKAGE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[a6paper, width={8.5cm}, top=1.8cm, bottom=1.5cm, twoside]{geometry}
+%\usepackage[a6paper, width={8.5cm}, height={13cm}, left=0.3cm, bottom=0.3cm, twoside]{geometry}
+\usepackage{commune} % has to be in the same directory
+\usepackage{communeM} % has to be in the same directory
+\usepackage{indentfirst}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{setspace}
+\usepackage{xstring}
+\usepackage{ifthen}
+\usepackage{calc}
+\usepackage{yfonts}
+\usepackage{lettrine}
+\usepackage{GoudyIn}
+\usepackage[object=vectorian]{pgfornament}
+\usepackage{tikz}
+\usepackage{lipsum}
+\usepackage{ragged2e}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Packages with short configuration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Libertine
+\usepackage{libertine}
+\setmainfont{Linux Libertine}
+
+% Truncate
+\usepackage[breakwords, fit]{truncate}
+\renewcommand{\TruncateMarker}{}
+
+% Multicol
+\usepackage{multicol}
+\setlength{\columnseprule}{.1pt}
+\def\columnseprulecolor{\color{red}}
+
+% Scrlayer-scrpage
+\usepackage[
+automark,
+autooneside=false,
+headsepline=0.1pt,
+	]{scrlayer-scrpage}
+\clearscrheadfoot
+\setkomafont{pagehead}{\normalfont\color{red}}
+\pagestyle{scrheadings}
+
+% Paracol
+\usepackage{paracol}
+\tolerance=1
+\hyphenpenalty=10000
+\hbadness=10000
+\colseprulecolor{red}
+%\NewCommandCopy{\oldparacol}{\paracol}
+\newcommand\pcb{\emergencystretch=\maxdimen} %text=block for paracol
+%\renewenvironment{paracol}{\oldparacol\pcb}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% General page configuration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength\parindent{.5em}
+\setlength\parskip{0em}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dynamical line stretch
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\stretch}[1]{\addtolength{#1}{\fill}}
+
+\flushbottom 
+
+\newcommand{\addstretch}[1]{
+\newlength\mystretch
+\mystretch=0pt plus 1pt\relax
+\addtolength{#1}{\mystretch}}
+
+\addstretch{\parskip}
+\addstretch{\baselineskip}
+\addstretch{\abovedisplayskip}
+\addstretch{\abovedisplayshortskip}
+\addstretch{\belowdisplayskip}
+\addstretch{\belowdisplayshortskip}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HEADER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ohead{\textcolor{black}{\pagemark}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% KOMAoptions 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\KOMAoption{fontsize}{9pt}
+%\recalctypearea
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% New commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\red}[1]{\textcolor{red}{#1}} % scriptcolour red 
+\newcommand{\black}[1]{\textcolor{black}{#1}} % scriptcolour black 
+\newcommand\CP{{\setmainfont{FreeSerif}\textcolor{red}{{\char"2720}}}} % cross pattée
+\newcommand\CPs{{\setmainfont{FreeSerif}\textcolor{red}{{\char"2720} }}} % cross pattée with space at the end
+\newcommand\R{{\setmainfont{FreeSerif}\textcolor{red}{{\char"211F}. }}} % R. for responsorium
+\newcommand\Rbr{{\setmainfont{FreeSerif}\textcolor{red}{{\char"211F}. br. }}} % R. for responsorium breve
+\newcommand\V{{\setmainfont{FreeSerif}\textcolor{red}{{\char"2123}. }}} % V. for responsorium
+\newcommand\VV{{\setmainfont{FreeSerif}\textcolor{red}{{\char"2123}{\char"2123}. }}} % VV. for rubrical instructions
+\newcommand\RR{{\setmainfont{FreeSerif}\textcolor{red}{{\char"211F}{\char"211F}. }}} % RR. for rubrical instructions
+\newcommand\Rb{{\setmainfont{FreeSerif}{\char"211F}. }} % R. in black
+\newcommand\Vb{{\setmainfont{FreeSerif}{\char"2123}. }} % V. in black
+\newcommand\f{† } % flexa
+\newcommand\A{\textcolor{red}{Aña }} % red 'Aña'
+\newcommand\Ant{\textcolor{red}{Ant. }} % red 'Ant.'
+\newcommand\Ana{\textcolor{red}{Aña }} % red 'Aña'
+\newcommand\I{\textcolor{red}{Invit. }} % red 'Invit.'
+\newcommand\Venite{\textcolor{red}{Ps. 94} Veníte, exsultémus. } % use after \I
+\newcommand\Dominusregnavit{\textcolor{red}{Ps. 92} Dóminus regnávit, decórem indútus est, \textcolor{red}{cum reliquis de Dominica. }}
+\newcommand\DixitDominus{\textcolor{red}{Ps. 109} Dixit Dóminus Dómino meo, \textcolor{red}{cum reliquis de Dominica. }}
+\newcommand\DixitDominusi{\textcolor{red}{Ps. 109} Dixit Dóminus Dómino meo, \textcolor{red}{cum reliquis de Commune Apostolorum. }}
+\newcommand\DixitDominusii{\textcolor{red}{Ps. 109} Dixit Dóminus Dómino meo, \textcolor{red}{cum reliquis ut in I Vesperis de Commune Apostolorum. }}
+\newcommand\caputsup{\rubric{Capitulum ut supra ad Laudes.}}
+\newcommand\M{\textcolor{red}{Ad Magnif. \A }} % red 'Ad. Magnif. Ant.'
+\newcommand\AV{\textcolor{red}{Ad Vesperas, }} % red 'Ad. Vesperas, '
+\newcommand\B{\textcolor{red}{Ad Bened. \A }} % red 'Ad. Bened. Ant.'
+\newcommand\AL{\textcolor{red}{Ad Laudes, }} % red 'Ad. Laudes, '
+\newcommand\mtv{\textcolor{black}{(m. t. v.)}} % creates (m. t. v.)
+\newcommand\Gl{\textcolor{red}{G}lória. } % pro responoria
+\newcommand\GlP{\textcolor{red}{G}lória Patri. } % longer version
+\newcommand\Te{\textcolor{red}{T}e Deum laudámus.} % creates Te Deum laudamus with red T
+\newcommand\TPA{ \textcolor{red}{(T. P.} Allelúja.\textcolor{red}{)} } % creates (T. P. Allelúja)
+\newcommand\Av[1]{\ifthenelse{\equal{#1}{1}}{\textcolor{red}{Ant. 1 }}{\textcolor{red}{#1} }}
+\newcommand{\Yii}[1]{\lettrine[lines=2]{\usefont{U}{GoudyIn}{xl}{n}#1}} % ornamental initial spanning two lines 
+\newcommand{\Y}[1]{\lettrine[lines=3]{\usefont{U}{GoudyIn}{xl}{n}#1}} % ornamental initial spanning three lines 
+\newcommand{\Yiv}[1]{\lettrine[lines=4]{\usefont{U}{GoudyIn}{xl}{n}#1}} % ornamental initial spanning four lines 
+\newcommand{\Yv}[1]{\lettrine[lines=5]{\usefont{U}{GoudyIn}{xl}{n}#1}} % ornamental initial spanning five lines 
+\newcommand{\Yo}[2]{\yinipar{#1}\uppercase{#2}} % ornamental initial spanning four lines 
+\newcommand{\y}[1]{\lettrine[lines=2]{\textcolor{red}{#1}}} % initial spanning two lines, red
+\newcommand{\yb}[1]{\lettrine[lines=2]{#1}} % initial spanning two lines, black
+\newcommand\KCK{\red{K}ýrie, eléison. Christe, eléison. Kýrie, eléison.} % Kyrie, eleison. Christe. Kyrie.
+\newcommand\PNusque{\red{P}ater noster, \red{secreto usque ad}
+
+\V Et ne nos indúcas in tentatiónem. \R Sed líbera nos a malo.} % Pater noster silent until Et ne nos inducas.
+\newcommand\DV{\V Dóminus vobíscum. \R Et cum spíritu tuo.}
+\newcommand\DVO{\V Dóminus vobíscum. \R Et cum spíritu tuo.
+
+\hfill\red{O}rémus.\hfill\null}
+\newcommand\DE{\V Dómine, exáudi oratiónem meam. \R Et clamor meus ad te véniat.}
+
+%\setlength{\DefaultNindent}{0pt} % align text after lettrine flush with rest
+%\setlength{\DefaultFindent}{1pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Trim header, helper script
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\ReplaceStr}[1]{%
+	\IfSubStr{#1}{ }{%
+		\StrSubstitute{#1}{ }{\char"00A0}}{#1}}
+%\newcommand{\trim}[2]{\ifodd\thepage{\truncate{200pt}{\StrSubstitute{#1} \StrSubstitute{—~#2}}}\else{\truncate{200pt}{\StrSubstitute{#1} \StrSubstitute{—~#2}}}\fi}
+\newcommand{\trim}[2]{
+	\newlength{\gnatada}
+	\settowidth{\gnatada}{#1 – #2}
+	\if\relax\detokenize{#1}\relax
+  		{#2}
+	\else {
+		\ifdim\gnatada>230pt {
+		\ifodd \thepage {#2}
+		\else {#1}
+		\fi
+	} \else {#1 — #2} \fi } \fi }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%new enviroments for different sections
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% For the title
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\titulum}[3]{
+	\thispagestyle{empty}
+	{\centering
+	\LARGE{\uppercase{#1}}
+
+	\ifthenelse{\equal{#2}{}}{}{\Huge{\red{\uppercase{#2}}}}
+	
+	\ifthenelse{\equal{#3}{}}{}{
+	
+	\vspace{-.6em}
+
+	\red{\noindent\rule{0.2 \textwidth}{.5pt}}
+	
+	\vspace{.3em}
+
+	\large{\uppercase{#3}}
+
+	}
+	
+	\vspace{-.3em}
+	
+	\red{\noindent\rule{1.0 \textwidth}{.5pt}}
+	
+	\vspace{-1em}
+	%\ifthenelse{\equal{#3}{}}{\vspace{-1em}}{\vspace{-1em}}
+
+	\red{\noindent\rule{1.0 \textwidth}{.5pt}}
+	
+	}
+}
+\newcommand{\titulumii}[3]{
+	\thispagestyle{empty}
+	{\centering
+	\Huge{\uppercase{#1}}
+
+	\LARGE{\red{\uppercase{#2}}}
+	
+	\vspace{-.6em}
+
+	\red{\noindent\rule{0.2 \textwidth}{.5pt}}
+	
+	\vspace{.3em}
+
+	\large{\uppercase{#3}}
+	
+	\vspace{-.3em}
+	
+	\red{\noindent\rule{1.0 \textwidth}{.5pt}}
+	
+	\vspace{-1em}
+
+	\red{\noindent\rule{1.0 \textwidth}{.5pt}}
+	
+	}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% deprecated
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\titulumalter}[3]{
+	\thispagestyle{empty}
+	{\centering
+	\large{\uppercase{#1}}
+
+	\Huge{\red{\uppercase{#2}}}
+	
+	\vspace{-.6em}
+
+	\red{\noindent\rule{0.2 \textwidth}{.5pt}}
+	
+	\vspace{.3em}
+
+	\LARGE{\uppercase{#3}}
+	
+	\vspace{-.3em}
+	
+	\red{\noindent\rule{1.0 \textwidth}{.5pt}}
+	
+	\vspace{-1em}
+
+	\red{\noindent\rule{1.0 \textwidth}{.5pt}}
+	
+	}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% at the beginning of a new month
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\mens}[1]{
+	{\centering
+	\noindent\rule{0.45 \textwidth}{.5pt}
+
+	\vspace{-1em}
+	
+	\noindent\rule{0.45 \textwidth}{.5pt}
+
+	\vspace{.3em}
+	
+	\large{\uppercase{#1}}
+
+	\vspace{-.3em}
+
+	\noindent\rule{0.45 \textwidth}{.5pt}
+
+	}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% at the beginning of a new month
+% for month at top of page with no
+% leading double lines
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\mensii}[1]{
+	{\centering
+	\large{\uppercase{#1}}
+
+	\vspace{-.3em}
+
+	\noindent\rule{0.45 \textwidth}{.5pt}
+
+	}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% for each day
+%%%%%
+% 1: Day
+% 2: Saint
+% 3: Liturgical category
+% 4: Liturgical rank
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\die}[4]{
+	{\centering
+	\vspace{-0.3em}
+	
+	\noindent\rule{0.45 \textwidth}{.5pt}
+	
+	\vspace{0.2em}
+	
+		#1
+
+		{\large{#2}} \ifthenelse{\equal{#3}{}}{}{\hspace{.3cm}} {\textcolor{red}{#3 \ifthenelse{\equal{#4}{}}{}{\hspace{.3cm} #4}}}
+
+	}
+	\chead{\trim{#1}{#2}}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \die without leading line
+% for days at top of page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\dieii}[4]{
+	
+	\vspace{1em}
+	
+	{\centering
+		#1
+
+		{\large{#2}} \ifthenelse{\equal{#3}{}}{}{\hspace{.3cm}} {\textcolor{red}{#3 \ifthenelse{\equal{#4}{}}{}{\hspace{.3cm} #4}}}
+
+	}
+	\chead{\trim{#1}{#2}}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% like \die but for feasts of rank Duplex II. classis or higher
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\privdie}[4]{
+	\end{multicols}
+	{\centering
+	\noindent\rule{1.0 \textwidth}{.5pt}
+
+	\vspace{-1em}
+
+	\noindent\rule{1.0 \textwidth}{.5pt}
+	
+	\vspace{1em}
+	
+		{\small{\uppercase{#1}}}
+		\vspace{.3em}
+
+		{\Large{#2 #3}}
+		\vspace{.5em}
+
+		{\scriptsize{\uppercase{#4}}}
+
+	}
+	\ifthenelse{\equal{#4}{}}{
+		\vspace{-1.8em}}{}
+	\begin{multicols}{2}
+	\chead{\trim{#1}{#2}}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \privdie without leading line, for when at top of page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\privdieii}[4]{
+	\end{multicols}
+	{\centering
+		{\small{\uppercase{#1}}}
+		\vspace{.3em}
+
+		{\Large{#2 #3}}
+		\vspace{.5em}
+
+		{\scriptsize{\uppercase{#4}}}
+
+	}
+	\ifthenelse{\equal{#4}{}}{
+		\vspace{-1.2em}}{}
+	\begin{multicols}{2}
+	\chead{\trim{#1}{#2}}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% for the Proprium de Tempore
+%%%%%
+% 1: Day
+% 2: When
+% 3: Further explanation
+% 4: Liturgical rank
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\diet}[4]{
+	{\centering
+	\vspace{-0.3em}
+	
+	\noindent\rule{0.45 \textwidth}{.5pt}
+	
+	\vspace{0.2em}
+	
+		{\uppercase{#1}}
+
+		{\small{\uppercase{#2}}} \ifthenelse{\equal{#3}{}}{}{\\\textcolor{red}{{\small{#3}}}} \ifthenelse{\equal{#4}{}}{}{\\ \red{#4}}
+
+	}
+	\chead{\trim{}{#1 #2}}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \diet without leading line
+% for days at top of page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\dietii}[4]{
+	
+	\vspace{1em}
+	
+	{\centering
+
+		{\uppercase{#1}}
+
+		{\small{\uppercase{#2}}} \ifthenelse{\equal{#3}{}}{}{\\\textcolor{red}{{\small{#3}}}} \ifthenelse{\equal{#4}{}}{}{\\ \red{#4}}
+
+	}
+	\chead{\trim{}{#1 #2}}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% for rubrical directions
+% also used for Abs., Bened. in Matutin.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\rubric}[1]{
+	{\small{\textcolor{red}{#1}}}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% e.g. In I Vesperis or Ad Matutinum
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\hora}[1]{
+	\vspace{.5em}
+	{\centering\small{\uppercase{#1}}
+
+		\vspace{.5em}
+	}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% for parts of a hour
+% e.g. Oratio, Hymnus, Psalmus, Lectio
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\pars}[1]{
+	\vspace{.3em}
+	{\centering\textcolor{red}{#1}
+
+	\vspace{.05em}
+	}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% for Oremus
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\oremus}[1]{
+	\vspace{.3em}
+	{\centering\textcolor{red}{O}rémus.
+
+	\vspace{.05em}
+	}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% mainly for Canticles
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\canticum}[2]{
+	\vspace{.3em}
+	{\centering\textcolor{red}{#1}
+
+	\rubric{#2}
+
+	\vspace{.05em}
+	}
+}
+
+%%%%%%%%%%%%%%%
+% alias of pars
+%%%%%%%%%%%%%%%
+\newcommand{\lectio}[1]{
+	\pars{#1}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% for lectio + chapter
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\lectiocap}[2]{
+	\lectio{#1 \hfill #2}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% for Capitulum + reference
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\capitulum}[1]{
+	\lectio{Capitulum \hfill #1}
+}
+
+%%%%%%%%%%%%%%%%%%%%%
+% for each nocturn
+%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\nocturn}[1]{
+	\vspace{.3em}
+	{\centering \libertineSB{#1}
+
+	%\vspace{.3em}
+	}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% for scriptural references in black
+% e.g. De Epistola etc. or Lectio sancti Evangelii or Homilia Sancti Ambrosii
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\scriptura}[1]{
+	\vspace{.3em}
+	{\centering #1
+
+	\vspace{.3em}
+	}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% for scriptural references in red
+% e.g. Homilia 5 in Evangelia
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\ex}[1]{
+	{\centering \small{\textcolor{red}{#1}}
+
+	\vspace{.3em}
+	}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% for commemoration notices at nocturn ix or iii
+% alias for \ex (more or less?)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\pro}[1]{
+	{\centering \vspace{.3em}
+
+		\small{\textcolor{red}{#1}}
+
+	}
+}
+
+\newcommand{\proii}[1]{
+	{\centering \vspace{.3em}
+
+		\small{\textcolor{red}{#1}}
+
+	\vspace{.3em}
+
+	}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Psalm Verses need indent
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{psalmus}{\setlength\parindent{.5em}\setlength\parskip{0em}\addstretch{\lineskip}\addstretch{\parskip}}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hymns need parskip 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{hymnus}{\RaggedRight \setlength\parskip{.4em}\setlength\parindent{.5em}}{}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% et per Horas (for Antiphones ad Laudes et per Horas)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\etper}{
+	\vspace{-.3em}
+	{\centering \red{e\,t \hspace{.2em} p\,e\,r \hspace{.2em} H\,o\,r\,a\,s}
+
+	\vspace{.3em}
+	}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Images
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\image}[1]{%
+	%\vspace{10em}
+	\begin{center}
+	\begin{tikzpicture}[remember picture,overlay]
+		\node at (0,-0.9) {\vspace{1em}\includegraphics[width=0.95\linewidth]{#1}};
+	\end{tikzpicture}
+	\end{center}
+	\thispagestyle{plain}
+	\vspace{6em}
+}
+
+\newcommand{\imagew}[2]{%
+	%\vspace{10em}
+	\begin{center}
+	\begin{tikzpicture}[remember picture,overlay]
+		\node at (0,-0.9) {\vspace{1em}\includegraphics[width=#2\linewidth]{#1}};
+	\end{tikzpicture}
+	\end{center}
+	\thispagestyle{plain}
+	\vspace{6em}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% various ornaments
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\fullline}{%
+	{\centering
+	\vspace{-0.3em}
+	
+	\noindent\rule{0.45 \textwidth}{.5pt}
+	
+	\vspace{0.2em}
+	}
+}
+
+\newcommand{\halfline}{%
+	{\centering
+	\vspace{-0.3em}
+	
+	\noindent\rule{0.25 \textwidth}{.5pt}
+	
+	\vspace{0.2em}
+	}
+}
+
+\newcommand{\thirdline}{%
+	{\centering
+	\vspace{-0.3em}
+	
+	\noindent\rule{0.17 \textwidth}{.5pt}
+	
+	\vspace{0.2em}
+	}
+}
+
+
+\newcommand{\ornamenti}{%
+	\noindent
+	\begin{center}
+		{\vspace*{\fill}
+
+			\resizebox{0.5\linewidth}{4ex}
+		{{%
+		{\begin{tikzpicture}
+			\node (A) at (0,0) {};
+			\node (C) at (4,0) {};
+			\node (D) at (8,0) {};
+			\node (B) at (12,0) {};
+			\path (A) to [ornament=14] (D);
+			\path (C) to [ornament=11] (B);
+		\end{tikzpicture}}}}
+
+	\vspace*{\fill}}%
+	\end{center}
+}
+
+% single line
+\newcommand{\ornamentl}{%
+	\begin{center}
+		{\vspace*{\fill}
+
+			\pgfornament[width = 1.5cm]{80}
+		
+			\vspace*{\fill}
+		}
+	\end{center}
+}
+
+\newcommand{\ornamentv}{%
+	\begin{center}
+		{\vspace*{\fill}
+
+			\pgfornament[width = 0.33\textwidth]{68}
+		
+			\vspace*{\fill}
+		}
+	\end{center}
+}
+
+% triangle pointing to the top
+\newcommand{\ornamentvi}{%
+	\begin{center}
+		{\vspace*{\fill}
+
+			\pgfornament[width = 2cm]{69}
+		}
+	\end{center}
+}
+
+\newcommand{\ornamentvii}{%
+	\begin{center}
+		{\vspace*{\fill}
+
+			\pgfornament[width = 0.25\textwidth]{70}
+		
+			\vspace*{\fill}
+		}
+	\end{center}
+}
+
+\newcommand{\ornamentviii}{%
+	\begin{center}
+		{\vspace*{\fill}
+
+			\pgfornament[width = 3cm]{71}
+		
+			\vspace*{\fill}
+		}
+	\end{center}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% for other projects
+% like the Regula 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% for each caput
+%%%%%
+% 1: Caput
+% 2: Title
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\caput}[2]{
+	{\centering
+	\vspace{-0.3em}
+	
+	\noindent\rule{0.45 \textwidth}{.5pt}
+	
+	\vspace{0.2em}
+	
+		#1
+
+		\textcolor{red}{#2}
+
+	}
+	\chead{\trim{#1}{#2}}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \caput without leading line
+% for chapters at top of page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\caputii}[2]{
+	{\centering
+	\vspace{0.2em}
+	
+		#1
+
+		\textcolor{red}{#2}
+
+	}
+	\chead{\trim{#1}{#2}}
+	
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Benedictiones
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Divinumauxilium}{
+	\rubric{Bened. \black{Divínum auxílium.}}
+}
+
+\newcommand{\PerEvangelica}{
+	\rubric{Bened. \black{Per Evangélica dicta.}}% deleántur nostra delícta.}}
+}
+
+\newcommand{\Evangelicalectio}{
+	\rubric{Bened. \black{Evangélica léctio.}}% sit nobis salus et protectio.}}
+}
+
+\newcommand{\Adsocietatem}{
+	\rubric{Bened. \black{Ad societátem.}}% civium supernorum perducat nos rex angelorum.}}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% for the day markings in the
+% Regula
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\diesiii}[3]{
+	
+	\rubric{#1 \hfill #2 \hfill #3}
+}
