@@ -1,0 +1,6 @@
+LaTeX-Templates:
+
+breviarium.sty: Enthält alle möglichen Befehle zum erstellen von liturgischen Büchern
+
+Commune.sty: Enthält einige Antiphonen und Versikel aus dem Commune Sanctorum des Breviarium Romanum
+CommuneM.sty: Enthält einige Antiphonen und Versikel aus dem Commune Sanctorum des Breviarium Monasticum
