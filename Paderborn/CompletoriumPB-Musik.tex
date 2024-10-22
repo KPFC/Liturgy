@@ -1,0 +1,1459 @@
+\documentclass[fontsize=10pt,paper=A5,twoside,BCOR=1mm,DIV=21,headinclude]{scrarticle}
+%\usepackage{calligra}
+\usepackage{breviarium}
+\usepackage[german]{babel}
+\usepackage[autocompile]{gregoriotex}
+%\usepackage{mathtools}
+%\usepackage{pdfpages}
+\newcommand{\DHSME}{\V Der Herr sei mit euch. \R Und mit deinem Geiste.}
+\newcommand{\DHL}{\DHSME
+
+\hfill\red{L}asset uns beten.\hfill\null}
+\newcommand{\position}[1]{{
+\centering \rubric{– \textit{#1} –}
+
+}}
+\renewcommand{\hora}[1]{
+	\addcontentsline{toc}{section}{#1}
+	\chead{#1}
+	\vspace{.5em}
+	{\centering\small{\uppercase{#1}}
+
+		\vspace{.5em}
+	}
+}
+\newcommand{\tempvar}{}
+\renewcommand{\die}[4]{
+	\addcontentsline{toc}{subsection}{#2 #4}
+	{\centering 
+		\vspace{-0.3em}
+
+		\noindent\rule{0.45 \textwidth}{.5pt}
+
+		\vspace{0.2em}
+
+		#1
+
+		{\large{#2}}
+
+		\ifthenelse{\equal{#3}{}}{\vspace{-1.1em}}{} {\textcolor{red}{#3}}
+
+	}
+	\chead{\trim{#1}{#2}}
+}
+\renewcommand{\dieii}[4]{
+	\addcontentsline{toc}{subsection}{#2 #4}
+
+
+	\vspace{1em}
+
+	{\centering 
+
+		#1
+
+		{\large{#2}}
+
+		\ifthenelse{\equal{#3}{}}{\vspace{-1.1em}}{} {\textcolor{red}{#3}}
+
+	}
+	\chead{\trim{#1}{#2}}
+}
+
+
+\addto\captionsgerman{\renewcommand{\contentsname}{Inhalt}}
+\begin{document}
+\thispagestyle{empty}
+{\centering\Large
+	\null
+
+	\vspace{2em}
+
+	Matthäus Freitag
+
+	\vspace{.5em}
+
+	Rafael Suppmann
+
+	%\vspace{2em}
+	\vfill
+
+	\LARGE Komplet
+
+	\vspace{1em}
+
+	\Large Nach dem Paderborner Brevier von 1513
+	
+	\vfill
+}
+\pagebreak 
+\thispagestyle{empty}
+\null
+\pagebreak
+\thispagestyle{empty}
+{\centering\LARGE
+	\null
+
+	\vspace{2em}
+
+	Matthäus Freitag
+
+	\vspace{.5em}
+
+	Rafael Suppmann
+
+	%\vspace{2em}
+	\vfill
+
+	\Huge Komplet
+
+	\vspace{1em}
+
+	\LARGE Nach dem Paderborner Brevier von 1513
+	
+	\vfill
+
+	\vspace{2em}
+
+	\Large Paderborn 2024
+
+	\vspace{2em}
+\pagebreak 
+\thispagestyle{empty}
+\null
+
+	\vfill
+
+%	\large Veröffentlichungen der\\Erzbischöflichen Akademischen Bibliothek\\Paderborn
+
+	\vspace{.5em}
+
+%	Herausgegeben vom Direktor der Bibliothek\\
+%	Prof. Dr. Hans-Walter Stork
+
+%	\vspace{1.5em}
+
+%	Heft ???
+
+	\vspace{3em}
+
+}
+\pagebreak
+\thispagestyle{empty}
+\null 
+
+\vspace*{-1.4cm}
+
+\tableofcontents
+
+%\vfill
+
+\null 
+
+\pagebreak
+\thispagestyle{empty}
+\null
+
+\vspace*{-1cm}
+\mensii{Ad Completorium}
+
+%\begin{center}
+%	\begin{tikzpicture}[remember picture]
+%		\node at (0,0) {\includegraphics[width=0.90\linewidth]{Lithographie-Lamm-Evangelisten.jpg}};
+%	\end{tikzpicture}
+%\end{center}
+%\null
+
+%\vspace{-1.2em}
+
+\hora{Eröffnung}
+
+\gresetinitiallines{0}
+\setlength{\columnseprule}{0pt}
+\begin{paracol}{2}\pcb
+%\y{C}{onverte} nos Deus salutáris noster.
+%\R Et avérte iram tuam a nobis.
+\gregorioscore{converte_nos}
+%	\V Deus in adjutórium meum inténde.
+%	\R Dómine ad adjuvándum me festína.
+%	\red{G}lória Patri et Fílio, * et Spirítui Sancto.
+%	\red{S}icut erat in princípio, et nunc, et semper, * et in s\'æcula sæculórum. Amen.
+%	\red{A}llelúja.
+%	\red{vel L}aus tibi, Dómine, \f Rex ætérnæ glóriæ \red{pro temporis diversitate.}
+\switchcolumn
+	\y{B}{ekehre} uns, Gott, unser Heil.
+	\R Und wende Deinen Zorn von uns ab.
+
+	\V O Gott, komm mir zu Hilfe.
+	\R Herr, eile, mir zu helfen.
+	\red{E}hre sei dem Vater und dem Sohn * und dem Heiligen Geist.
+	\red{W}ie im Anfang, so auch jetzt und alle Zeit * und in Ewigkeit. Amen.
+	\red{A}llelǘja.
+	\red{oder L}ob sei dir, Herr, König der ewigen Herrlichkeit \red{von Septuagesima bis Ostern.}
+\end{paracol}
+\gregorioscore{deus_in_adjutorium}
+\setlength{\columnseprule{.1pt}
+\gresetinitiallines{1}
+
+\hora{Psalmodie}
+
+\pars{Psalm 4}
+
+\vspace{.3em}
+
+\begin{paracol}{2} \pcb
+\begin{psalmus}
+
+\Y{C}{um} invocárem~exaudívit me Deus justítiæ meæ: * in tribulatióne dilatásti mihi.
+	\switchcolumn
+	\yb{D}{a} ich rief, erhörte mich der Gott meiner Gerechtigkeit; * in der Trübsal hast Du mir Raum gemacht.
+\switchcolumn*
+Miserére mei, * et exáudi oratiónem meam.
+	\switchcolumn
+	Erbarme Dich meiner * und erhöre mein Gebet.
+\switchcolumn*
+Fílii hóminum, úsquequo gravi corde? * ut quid dilígitis vanitátem, et quǽritis mendácium?
+
+Et scitóte quóniam mirificávit Dóminus sanctum suum: * Dóminus exáudiet me cum clamávero ad eum.
+	\switchcolumn
+	Ihr Menschenkinder! wie lange ist noch schwer euer Herz? * Warum liebt ihr die Eitelkeit, und suchet die Lüge?
+
+	Wisset doch, dass der Herr Wunder getan an Seinem Heiligen; * der Herr höret mich, wenn ich zu Ihm rufe.
+\switchcolumn*
+Irascímini, et nolíte peccáre: * quæ dícitis in córdibus vestris, in cubílibus vestris compungímini.
+	\switchcolumn
+	Zürnet ihr, so sündiget nicht; * was ihr sprechet in eurem Herzen, das bereuet auf euern Lagern.
+\switchcolumn*
+Sacrificáte sacrifícium justítiæ, et speráte in Dómino. * Multi dicunt: Quis osténdit nobis bona?
+
+Signátum est super nos lumen vultus tui, Dómine: * dedísti lætítiam in corde meo.
+	\switchcolumn
+	Opfert ein Opfer der Gerechtigkeit, und hoffet auf den Herrn! * Viele sagen: Wer wird uns Gutes sehen lassen?
+
+	Das Licht Deines Angesichtes ist gezeichnet über uns, o Herr; * Du hast Freude in mein Herz gegeben!
+\switchcolumn*
+A fructu fruménti, vini, et ólei sui * multiplicáti sunt.
+
+In pace in idípsum * dórmiam, et requiéscam;
+
+Quóniam tu, Dómine, singuláriter in spe * constituísti me.
+	
+Glória Patri, et Fílio, * et Spirítui Sancto.
+	\switchcolumn
+	Von der Frucht des Getreides, des Weines, und ihres Öles * sind sie reich geworden.
+
+	In Frieden zugleich * werde ich schlafen und ruhen.
+
+	Denn Du, Herr, hast mich in der Hoffnung * beispiellos festgestellt.
+
+	Ehre sei dem Vater und dem Sohn * und dem Heiligen Geist.
+\switchcolumn*
+Sicut erat in princípio, et nunc et semper, * et in s\'æcula sæculórum. Amen.
+	\switchcolumn
+	Wie im Anfang, so auch jetzt und alle Zeit * und in Ewigkeit. Amen.
+\end{psalmus}
+\end{paracol}
+
+\pars{Psalm 30, 1-6}
+
+\vspace{.3em}
+
+\begin{paracol}{2} \pcb
+\begin{psalmus}
+\y{I}{n} te, Dómine, sperávi, non confúndar in ætérnum: * in justítia tua líbera me.
+
+	\switchcolumn 
+	\y{A}{uf} Dich, o Herr, habe ich gehofft; möge ich niemals zuschanden werden; * in Deiner Gerechtigkeit befreie mich.
+\switchcolumn*
+Inclína ad me aurem tuam, * accélera ut éruas me.
+
+Esto mihi in Deum protectórem, et in domum refúgii: * ut salvum me fácias.
+	\switchcolumn 
+	Neige Dein Ohr zu mir, * eile, mich zu erretten!
+
+	Sei mir ein schirmender Gott und eine Stätte der Zuflucht, * auf dass Du mir Heil verschaffst!
+\switchcolumn*
+Quóniam fortitúdo mea, et refúgium meum es tu: * et propter nomen tuum dedúces me, et enútries me.
+
+Edúces me de láqueo hoc, quem abscondérunt mihi: * quóniam tu es protéctor meus.
+
+In manus tuas comméndo spíritum meum: * redemísti me, Dómine, Deus veritátis.
+
+%Odísti observántes vanitátes, * supervácue.
+
+%Ego autem in Dómino sperávi: * exsultábo, et lætábor in misericórdia tua.
+	\switchcolumn 
+	Denn Du bist meine Stärke und meine Zuflucht, * und um Deines Namens willen mögest Du mich leiten und nähren.
+
+	Du wirst mich aus der Schlinge ziehen, die man mir heimlich gelegt hat; * denn Du bist mein Beschirmer.
+
+	In Deine Hände befehle ich meinen Geist: * Du hast mich erlöst, o Herr, Gott der Treue.
+
+%	Verhaß sind Dir die Verehrer * nichtiger Götzen.
+
+%	Ich aber schenke dem Herrn mein Vertrauen: * Freudig will ich frohlocken ob Deiner Huld.
+%\switchcolumn*
+%Quóniam respexísti humilitátem meam, * salvásti de necessitátibus ánimam meam.
+
+%Nec conclusísti me in mánibus inimíci: * statuísti in loco spatióso pedes meos.
+%	\switchcolumn
+%	Daß Du mein Elend geschaut, * meiner Seele Nöte beachtet hast.
+
+%	Daß Du mich nicht der Feindeshand überliefert, * sondern auf freien Ort meine Füße gestellt hast.
+%\switchcolumn*
+%Miserére mei, Dómine, quóniam tríbulor: * conturbátus est in ira óculus meus, ánima mea, et venter meus:
+
+%Quóniam defécit in dolóre vita mea: * et anni mei in gemítibus.
+
+%Infirmáta est in paupertáte virtus mea: * et ossa mea conturbáta sunt.
+
+%Super omnes inimícos meos factus sum oppróbrium et vicínis meis valde: * et timor notis meis.
+
+%Qui vidébant me, foras fugérunt a me: * oblivióni datus sum, tamquam mórtuus a corde.
+
+%Factus sum tamquam vas pérditum: * quóniam audívi vituperatiónem multórum commorántium in circúitu.
+
+%In eo dum convenírent simul advérsum me, * accípere ánimam meam consiliáti sunt.
+%	\switchcolumn
+%	Erbarme Dich meiner, Herr, ich bin ja in Not! * Vor Kummer ist matt mein Auge, meine Seele und mein Leib.
+
+%	Denn in Jammer schwindet mein Leben dahin: * meine Jahre verrinnen in Seufzen.
+
+%	Vor Elend bricht meine Kraft zusammen, * meine Glieder ermatten.
+
+%	Vor all meinen Feinden ward ich zum Hohn, meinen Nachbarn zum Spott, * ein Schrecken für meine Bekannten.
+
+%	Wer mich sieht auf der Straße, flieht vor mir: Wie ein Toter bin ich dem Gedächtnis entschwunden.
+
+%	Bin geworden wie ein zerbrochenes Gefäß: * Ja, ich höre das Gerede von vielen: Grauen ringsum!
+
+%	Gemeinsam planen sie gegen mich: * und sinnen darauf, mir das Leben zu rauben.
+%\switchcolumn*
+%Ego autem in te sperávi, Dómine: * dixi: Deus meus es tu: in mánibus tuis sortes meæ.
+
+%Éripe me de manu inimicórum meórum, * et a persequéntibus me.
+
+%Illústra fáciem tuam super servum tuum, salvum me fac in misericórdia tua: * Dómine, non confúndar, quóniam invocávi te.
+
+%Erubéscant ímpii, et deducántur in inférnum: * muta fiant lábia dolósa.
+%	\switchcolumn
+%	Ich aber, Herr, vertraue auf Dich * und spreche: Mein Gott bist Du! In Deinen Händen liegt mein Geschick.
+
+%	Der Hand meiner Feinde entreiße mich * und meinen Verfolgern.
+
+%	Laß über Deinem Knecht Dein Antlitz leuchten, rette mich durch Deine Huld: * Herr, möge ich nicht enttäuscht werden, da ich zu Dir rufe!
+
+%	Enttäuscht sollen die Frevler werden, schweigend ins Totenreich sinken: * Verstummen sollen die Lügenlippen!
+%\switchcolumn*
+%Quæ loquúntur advérsus justum iniquitátem: * in supérbia, et in abusióne.
+
+%Quam magna multitúdo dulcédinis tuæ, Dómine, * quam abscondísti timéntibus te.
+
+%Perfecísti eis, qui sperant in te, * in conspéctu filiórum hóminum.
+%	\switchcolumn
+%	Die Freches wider den Schuldlosen reden: * in Hochmut und in Verachtung.
+
+%	Wie reich ist doch Dein Gut, o Herr, * das Du denen verwahrst, die Dich fürchten.
+
+%	Das Du denen bereitest, die auf Dich hoffen, * vor dem Antlitz der Menschenkinder.
+%\switchcolumn*
+%Abscóndes eos in abscóndito faciéi tuæ * a conturbatióne hóminum.
+
+%Próteges eos in tabernáculo tuo * a contradictióne linguárum.
+
+%Benedíctus Dóminus: * quóniam mirificávit misericórdiam suam mihi in civitáte muníta.
+%	\switchcolumn
+%	Du birgst sie im Schutz Deines Angesichts * vor den Machenschften der Menschen.
+
+%	Du bewahrst sie wie in einem Zelt * vor dem Gezänk der Zungen.
+
+%	Gelobt sei der Herr, * der mir wunderbare Huld erweist im Schrecken der Bedrängnis!
+%\switchcolumn*
+%Ego autem dixi in excéssu mentis meæ: * Projéctus sum a fácie oculórum tuórum.
+%	\switchcolumn
+%	Schon hatte ich gedacht in meiner Angst: * Ich bin aus Deinen Augen ganz verschwunden.
+%\switchcolumn*
+%Ídeo exaudísti vocem oratiónis meæ, * dum clamárem ad te.
+
+%Dilígite Dóminum omnes sancti ejus: * quóniam veritátem requíret Dóminus, et retríbuet abundánter faciéntibus supérbiam.
+%	\switchcolumn
+%	Du aber hast mein lautes Flehen vernommen, * da ich zu Dir rief.
+
+%	Liebt den Herrn, ihr Seine Frommen alle: * Der Herr behütet die Getreuen, doch er vergilt mit vollem Maß den Stolzen.
+\switchcolumn*
+%Viríliter ágite, et confortétur cor vestrum, * omnes, qui sperátis in Dómino.
+
+Glória Patri, et Fílio, * et Spirítui Sancto.
+	\switchcolumn
+%	Seid stark und unverzagten Herzens, * ihr alle, die ihr harrt des Herrn!
+
+	Ehre sei dem Vater und dem Sohn * und dem Heiligen Geist.
+\switchcolumn*
+Sicut erat in princípio, et nunc et semper, * et in s\'æcula sæculórum. Amen.
+	\switchcolumn
+	Wie im Anfang, so auch jetzt und alle Zeit * und in Ewigkeit. Amen.
+\end{psalmus}
+\end{paracol}
+
+\pars{Psalm 90}
+
+\vspace{.3em}
+
+\begin{paracol}{2} \pcb
+\begin{psalmus}
+\y{Q}{ui} hábitat in adjutório Altíssimi, * in protectióne Dei cæli commorábitur.
+	\switchcolumn
+	\y{W}{er} unter der Hilfe des Allerhöchsten wohnt, * weilt unter dem Schirme des Gottes des Himmels.
+\switchcolumn*
+Dicet Dómino: Suscéptor meus es tu, et refúgium meum: * Deus meus sperábo in eum.
+
+Quóniam ipse liberávit me de láqueo venántium, * et a verbo áspero.
+
+Scápulis suis obumbrábit tibi: * et sub pennis ejus sperábis.
+	\switchcolumn
+	Er wird zum Herrn sagen: Du bist mein Helfer und meine Zuflucht, * mein Gott, auf den ich vertraue.
+
+	Denn Er hat mich befreit aus der Schlinge der Jäger * und von dem scharfen Wort.
+	
+	Mit Seinen Schultern wird er dich bedecken, * und unter Seinen Flügeln wirst du hoffen.
+\switchcolumn*
+Scuto circúmdabit te véritas ejus: * non timébis a timóre noctúrno,
+	\switchcolumn
+	Mit einem Schild wird dich Seine Treue umgeben, * du wirst dich nicht fürchten vor dem nächtlichen Schrecken.
+\switchcolumn*
+A sagítta volánte in die, a negótio perambulánte in ténebris: * ab incúrsu, et dæmónio meridiáno.
+
+Cadent a látere tuo mille, et decem míllia a dextris tuis: * ad te autem non appropinquábit.
+
+Verúmtamen óculis tuis considerábis: * et retributiónem peccatórum vidébis.
+	\switchcolumn
+	Nicht vor dem Pfeile, der bei Tage fliegt, vor dem Unheil, das im Finstern wandelt, * vor dem Überfalle und dem Mittagsdämon.
+	
+	An deiner Seite werden tausend fallen und zehntausend zu deiner Rechten, * aber dir wird es nicht nahen.
+	
+	Ja, mit eigenen Augen wirst du es schauen * und die Vergeltung an den Sündern sehen.
+\switchcolumn*
+Quóniam tu es, Dómine, spes mea: * Altíssimum posuísti refúgium tuum.
+	\switchcolumn
+	Denn Du, o Herr, bist meine Hoffnung, * den Allerhöchsten hast du zu deiner Zuflucht gemacht.
+\switchcolumn*
+Non accédet ad te malum: * et flagéllum non appropinquábit tabernáculo tuo.
+
+Quóniam Ángelis suis mandávit de te: * ut custódiant te in ómnibus viis tuis.
+	\switchcolumn
+	Kein Unheil wird dir begegnen, * und keine Plage deinem Zelte nahen.
+
+	Denn Er hat Seinen Engeln für dich geboten, * dass sie dich behüten auf allen deinen Wegen.
+\switchcolumn*
+In mánibus portábunt te: * ne forte offéndas ad lápidem pedem tuum.
+	\switchcolumn
+	Auf den Händen werden sie dich tragen, * dass du deinen Fuß nicht an einen Stein stoßest.
+\switchcolumn*
+Super áspidem, et basilíscum ambulábis: * et conculcábis leónem et dracónem.
+	\switchcolumn
+	Über Nattern und Otter wirst du hinschreiten * und Löwen und Drachen zertreten.
+\switchcolumn*
+Quóniam in me sperávit, liberábo  eum: * prótegam eum, quóniam cognóvit nomen meum.
+
+Clamábit ad me, et ego exáudiam eum: * cum ipso sum in tribulatióne: erípiam eum et glorificábo eum.
+	\switchcolumn
+	Weil er auf mich vertraut hat, so will ich ihn befreien, * ihn beschirmen, weil er meinen Namen kennt.
+
+	Er wird mich anrufen und ich werde ihn erhören, ich bin bei ihm in der Not, * ich werde ihn retten und ihn zu Ehren bringen.
+\switchcolumn*
+Longitúdine diérum replébo eum: * et osténdam illi salutáre meum.
+
+Glória Patri, et Fílio, * et Spirítui Sancto.
+	\switchcolumn
+	Mit langem Leben will ich ihn sättigen * und ihm mein Heil zeigen.
+
+	Ehre sei dem Vater und dem Sohn * und dem Heiligen Geist.
+\switchcolumn*
+Sicut erat in princípio, et nunc et semper, * et in s\'æcula sæculórum. Amen.
+	\switchcolumn
+	Wie im Anfang, so auch jetzt und alle Zeit * und in Ewigkeit. Amen.
+\end{psalmus}
+\end{paracol}
+
+\pars{Psalm 133}
+
+\vspace{.3em}
+
+\begin{paracol}{2} \pcb
+\begin{psalmus}
+\y{E}{cce} nunc benedícite Dóminum, * omnes servi Dómini.
+
+Qui statis in domo Dómini, * in átriis domus Dei nostri.
+
+In nóctibus extóllite manus vestras in sancta, * et benedícite Dóminum.
+
+Benedícat te Dóminus ex Sion, * qui fecit cælum et terram.
+
+Glória Patri, et Fílio, * et Spirítui Sancto.
+	\switchcolumn
+	\y{W}{ohlan}, nun preiset den Herrn, * alle Diener des Herrn.
+
+	Die ihr steht im Hause des Herrn, * in den Vorhöfen des Hauses unseres Gottes.
+
+	Des Nachts erhebet eure Hände zum Heiligtum, * und preiset den Herrn.
+
+	Der Herr segne dich aus Sion, * der Himmel und Erde erschaffen hat.
+
+	Ehre sei dem Vater und dem Sohn * und dem Heiligen Geist.
+\switchcolumn*
+Sicut erat in princípio, et nunc et semper, * et in s\'æcula sæculórum. Amen.
+	\switchcolumn
+	Wie im Anfang, so auch jetzt und alle Zeit * und in Ewigkeit. Amen.
+\end{psalmus}
+\end{paracol}
+
+\red{Antiphon außerhalb von Septuagesima} Alleluia.
+
+\rubric{Vom Sonntag Septuagesima allerdings bis zum Osterfest wird immer gesagt:}
+
+\begin{paracol}{2}\pcb
+\A Laus tibi domine rex eterne glorie.
+	\switchcolumn 
+	\A Lob sei dir, Herr, König der ewigen Herrlichkeit.
+\end{paracol}
+
+\hora{Hymnus}
+
+\rubric{Die folgenden Hymnen werden immer verwendet, wenn nicht unter den Proprien ein eigener Hymnus für die Kirchenjahreszeit oder das Fest angegeben ist.}
+
+\pagebreak
+\pars{Hymnus am Samstag}
+
+%\rubric{Dieser und die folgenden Hymnen werden an den ihnen zugewiesenen Tagen sowohl im Offizium de Tempore als auch de Sanctis gesagt, außer ein bestimmtes Fest fordert einen anderen Hymnus wie im Advent der Geburt des Herrn, am Fest der Epiphanie des Herrn, in der Oster- und Pfingstoktav und in den Oktaven von Corpus Christi und der Seligen Jungfrau Maria.}
+
+\vspace{.3em}
+
+\begin{paracol}{2}\pcb
+\begin{hymnus}
+\y{J}{esu} redémptor s\'æculi\\
+\hspace{1.6em} verbum Patris altíssimi,\\
+lux lucis invisíbilis,\\
+custos tuórum pérvigil.
+
+\red{T}u fabricátor ómnium,\\
+discrétor atque témporum,\\
+fessa labóre córpora,\\
+noctis quiétæ récrea.
+
+\red{T}e deprecámur súpplices,\\
+ut nos ab hoste líberes:\\
+ne valeat sedúcere\\
+tuo redémptos sánguine.
+
+\red{U}t dum gravi in córpore\\
+brevi manémus témpore:\\
+sic caro nostra dórmiat,\\
+ut mens sopórem nésciat.
+	\switchcolumn
+	\y{J}{esus}, Erlöser aller Zeit,\\
+	\hspace{1.6em} Des allerhöchsten Vaters Wort,\\
+	vom unsichtbaren Lichte Licht,\\
+	Der Deinen stets wachsame Wacht.
+
+	\red{D}u aller Dinge Schöpfer bist,\\
+	der auch die Zeiten unterscheid'st,\\
+	durch Arbeit Körper matt und müd\\
+	erfrische durch die Ruh der Nacht.
+
+	\red{D}ich bitten wir nun flehentlich,\\
+	befreie uns vom Feind geschwind;\\
+	damit er nicht verführen kann,\\
+	die du mit deinem Blut erlöst'.
+
+	\red{D}amit wie wir im schweren Leib,\\
+	für eine kurze Zeit ausharr'n;\\
+	so unser Fleisch nun schlafen mög',\\
+	dass unser Geist den \red{(Todes-)}Schlaf nicht kennt.
+\switchcolumn*
+\red{S}it Christe rex piíssime\\
+tibi Patríque glória\\
+cum Spíritu Paráclito\\
+et nunc et in perpétuum. \red{A}men.
+	\switchcolumn
+	\red{D}ir Christe, König, mildester\\
+	Dir und dem Vater Herrlichkeit\\
+	zusammen mit dem Heil'gen Geist\\
+	von nun an in all' Ewigkeit! \red{A}men.
+\end{hymnus}
+\end{paracol}
+
+\pars{Hymnus am Sonntag, Dienstag und Donnerstag}
+
+\vspace{.3em}
+
+\begin{paracol}{2}\pcb
+\begin{hymnus}
+\y{T}{e} lucis ante términum\\
+\hspace{1.6em} rerum creátor póscimus:\\
+ut sólita cleméntia\\
+sis præsul ad custódiam.
+
+\red{P}rocul recédant sómnia\\
+et noctium fantásmata,\\
+hostémque nostrum cómprime\\
+ne polluántur córpora.
+
+\red{P}ræsta Pater omnípotens\\
+per Jesum Christum Dóminum,\\
+qui tecum in perpétuum\\
+regnat cum Sancto Spíritu. \red{A}men.
+	\switchcolumn
+	\y{E}{h'} nun verschwindet ganz das Licht,\\
+	\hspace{1.6em} O Weltenschöpfer, in der Nacht\\
+	Fleh'n wir, dass du in deiner Huld\\
+	Uns Schützer seist und sich're Wacht.
+
+	\red{H}alt schlimmes Traumgespinst uns fern\\
+	Und was uns in der Nachtzeit schreckt.\\
+	In Fesseln halte unsern Feind,\\
+	Dass er kein Stück von uns befleckt.
+
+	\red{A}llmächt'ger Vater steh uns bei\\
+	durch Jesum Christum unserm Herrn,\\
+	der mit dir in Allewigkeit\\
+	regiert mit dem Fürsprechergeist. \red{A}men.
+\end{hymnus}
+\end{paracol}
+
+\pagebreak
+\pars{Hymnus am Montag, Mittwoch und Freitag}
+
+\vspace{.3em}
+
+\begin{paracol}{2}\pcb
+\begin{hymnus}
+\y{C}{riste}, qui lux es et dies,\\
+\hspace{1.6em} noctis tenébras détegis,\\
+lucísque lumen créderis,\\
+lumen beátum pr\'ædicans.
+
+\red{P}recámur sancte Dómine,\\
+defende nos in hac nocte,\\
+sit nobis in te réquies,\\
+quiétam noctem tríbue.
+
+\red{N}e gravis somnus írruat,\\
+nec hostis nos surrípiat,\\
+nec car\textit{o} illi conséntiens,\\
+nos tibi reos státuat.
+
+\red{O}cúli somnum cápiant,\\
+cor ad te semper vígilet,\\
+dextéra tua prótegat\\
+famúlos, qui te díligunt.
+
+\red{D}efénsor noster áspice,\\
+insidiántes réprime,\\
+gubérna tuos fámulos,\\
+quos sánguine mercátus es.
+
+\red{M}eménto nostri Dómine,\\
+in gravi isto córpore:\\
+qui es defénsor ánime,\\
+adésto nobis Dómine.
+
+\red{D}eo Patri sit glória\\
+ejúsque soli Fílio\\
+cum Spíritu Paráclito\\
+et nunc et in perpétuum. \red{A}men.
+	\switchcolumn
+	\y{C}{hristus,} der Du bist Licht und Tag,\\
+	\hspace{1.6em} Enthüllst die Finsternis der Nacht,\\
+	Wir glauben, Du bist Licht vom Licht\\
+	das sel'ge Licht verkündigend.
+
+	\red{W}ir bitten Dich, o heil'ger Herr,\\
+	verteidig uns in dieser Nacht;\\
+	in Dir sei uns wohlige Ruh,\\
+	uns schenk nun eine ruhige Nacht.
+
+	\red{D}ass nicht der schwere Schlaf eindring'\\
+	der Feind uns auch nicht heimlich stehl'\\
+	und nicht das Fleisch verschwöre sich\\
+	dass vor Dir stehen schuldig wir.
+
+	\red{W}enn unsre Augen fassen Schlaf,\\
+	das Herz stets Deiner wachen mög';\\
+	Mög' schützen Deine Rechte stets\\
+	die Diener Dein, die lieben Dich.
+
+	\red{V}erteid'ger unser, schau auf uns;\\
+	die uns auflauern, halt zurück.\\
+	Und lenke Deine Dienerschar,\\
+	die Du mit Blut erkaufet hast.
+
+	\red{G}edenke unser Herr und Gott\\
+	in diesem ach so schwerlich Leib:\\
+	Der Du bist der Seelen Schutzherr\\
+	steh Du uns bei Herr allezeit.
+	
+	\red{G}ott Vater sei stets Preis und Ruhm\\
+	Und seinem eingebornen Sohn:\\
+	Mit ihnen auch dem Heil'gen Geist,\\
+	Jetzt und in aller Ewigkeit. \red{A}men.
+\end{hymnus}
+\end{paracol}
+
+\hora{Capitulum}
+
+\rubric{Das folgende Capitulum mit zugehörigem \V wird immer verwendet, wenn nicht unter den Proprien ein eigenes Capitulum für die Kirchenjahreszeit oder das Fest angegeben ist.}
+
+\lectiocap{Capitulum}{Vgl. Sach. 8, 19}
+
+\vspace{.3em}
+
+\begin{paracol}{2} \pcb
+\y{P}{acem} et veritátem atque justítiam diligite ait Dóminus omnípotens.
+\R Deo grátias.
+
+\V Custódi nos Dómine ut pupíllam óculi.
+\R Sub umbra alárum tuárum prótege nos.
+	\switchcolumn
+	\y{L}{iebt} den Frieden, die Wahrheit und die Gerechtigkeit, spricht der allmächtige Herr.
+	\R Dank sei Gott.
+
+	\V Behüte uns, Herr, wie den Augenstern.
+	\R Unter dem Schatten Deiner Flügel beschütze uns.
+\end{paracol}
+
+\hora{Lobgesang des Simeon}
+
+\vspace{.3em}
+
+\gresetinitiallines{1}
+
+\rubric{An Samstagen und Sonntagen wird das Canticum nach folgender Melodie gesungen:}
+
+\gregorioscore{nunc_dimittis_4E}
+
+\begin{paracol}{2}\pcb
+\begin{psalmus}
+%\Yii{N}{unc} dimíttis servum tuum Dómine * secúndum verbum tuum in pace.
+
+	\Yii{Q}{uia} vidérunt ó\textbf{cu}li \textbf{me}i: * sa\textbf{lu}tá\textit{re} \textbf{tu}um.
+	\switchcolumn
+	%\yb{N}{un} entlässt Du, Herr, Deinen Knecht * nach Deinem Wort in Frieden.
+
+	\yb{D}{enn} meine Augen * haben Dein Heil gesehen.
+\switchcolumn*
+\textbf{Quod} pa\textbf{rás}ti: * ante fáciem ómni\textbf{um} po\textit{pu}\textbf{ló}rum.
+
+Lumen ad revelati\textbf{ó}nem \textbf{gén}tium: * et glóriam ple\textbf{bis} tu\textit{æ} Is\textbf{ra}ël.
+	\switchcolumn
+	Das Du Bereitet hast * vor dem Angesicht aller Völker.
+
+	Ein Licht zur Erleuchtung der Heiden * und zur Verherrlichung Deines Volkes Israel.
+\switchcolumn*
+Glória \textbf{Pa}tri, et \textbf{Fí}lio, * et Spir\textbf{í}tu\textit{i} \textbf{Sanc}to.
+	\switchcolumn
+	Ehre sei dem Vater und dem Sohn * und dem Heiligen Geist.
+\switchcolumn*
+Sicut erat in princípio, et \textbf{nunc} et \textbf{sem}per, * et in s\'æcula sæ\textbf{cu}ló\textit{rum.} \textbf{A}men.
+	\switchcolumn
+	Wie im Anfang, so auch jetzt und alle Zeit * und in Ewigkeit. Amen.
+\end{psalmus}
+\end{paracol}
+
+%\rubric{Am Fest Mariä Verkündigung wird es nach folgender Melodie gesungen:}
+
+%\gregorioscore{nunc_dimittis_5a}
+
+%\begin{paracol}{2}\pcb
+%\begin{psalmus}
+%\Yii{N}{unc} dimíttis servum tuum Dómine * secúndum verbum tuum in pace.
+
+%	\Yii{Q}{uia} vidérunt óculi \textbf{me}i: * salu\textbf{tá}\textit{re} \textbf{tu}um.
+%	\switchcolumn
+	%\yb{N}{un} entlässt Du, Herr, Deinen Knecht * nach Deinem Wort in Frieden.
+
+%	\yb{D}{enn} meine Augen * haben Dein Heil gesehen.
+%\switchcolumn*
+%\textit{Quod} pa\textbf{rás}ti: * ante fáciem ómnium \textbf{po}\textit{pu}\textbf{ló}rum.
+
+%Lumen ad revelatiónem \textbf{gén}tium: * et glóriam plebis \textbf{tu}\textit{æ} \textbf{Is}raël.
+%	\switchcolumn
+%	Das Du Bereitet hast * vor dem Angesicht aller Völker.
+
+%	Ein Licht zur Erleuchtung der Heiden * und zur Verherrlichung Deines Volkes Israel.
+%\switchcolumn*
+%Glória Patri, et \textbf{Fí}lio, * et Spir\textbf{í}tu\textit{i} \textbf{Sanc}to.
+%	\switchcolumn
+%	Ehre sei dem Vater und dem Sohn * und dem Heiligen Geist.
+%\switchcolumn*
+%Sicut erat in princípio, et nunc et \textbf{sem}per, * et in s\'æcula sæcu\textbf{ló}\textit{rum.} \textbf{A}men.
+%	\switchcolumn
+%	Wie im Anfang, so auch jetzt und alle Zeit * und in Ewigkeit. Amen.
+%\end{psalmus}
+%\end{paracol}
+
+\rubric{Nun wird eine der folgenden Antiphonen gelesen.}
+
+\pars{Antiphon an Samstagen}
+
+\vspace{.3em}
+
+\setlength{\columnseprule}{0pt}
+\begin{paracol}{2}\pcb
+%\A Vígila super nos ætérne salvátor: ne nos apprehéndat calidus temptátor, quia tu nobis factus es sempitérnus adjútor.
+	\gregorioscore{vigila_super_nos--solesmes_2000s_1}
+	\switchcolumn 
+	\A Wach über uns o ew'ger Erlöser, dass uns nicht ergreift der hitzige Versucher, denn du bist uns geworden immerwährender Helfer.
+\end{paracol}
+\gresetinitiallines{0}
+\gregorioscore{vigila_super_nos--solesmes_2000s_2}
+\gresetinitiallines{1}
+\setlength{\columnseprule{.1pt}
+
+\pars{Antiphon an Sonntagen}
+
+\vspace{.3em}
+
+\setlength{\columnseprule}{0pt}
+\begin{paracol}{2}\pcb
+%\A Pacem tuam qu\'æsumus Dómine: et pax tua Christe máneat in méntibus nostris, ut non timeámus a timóre noctúrno, sed semper vigilémus cunctis in opéribus mandatórum tuórum.
+	\gregorioscore{pacem_tuam--solesmes_1957_1}
+	\switchcolumn 
+	\A Deinen Frieden suchen wir o Herr, und dein Frieden, o Christ, bleibe in unseren Geistern, dass wir nicht fürchten die nächtlichen Schrecken, sondern in allen Werken immer wachsam sind deinen Geboten.
+\end{paracol}
+\gresetinitiallines{0}
+\gregorioscore{pacem_tuam--solesmes_1957_2}
+\gresetinitiallines{1}
+\setlength{\columnseprule{.1pt}
+
+\rubric{An Ferialtagen wird das Canticum nach folgender Melodie gesungen:}
+
+\gregorioscore{nunc_dimittis_3a}
+
+\begin{paracol}{2}\pcb
+\begin{psalmus}
+%\Yii{N}{unc} dimíttis servum tuum Dómine * secúndum verbum tuum in pace.
+
+	\Yii{Q}{uia} vidérunt \textbf{ó}culi \textbf{me}i: * salu\textbf{tá}\textit{re} \textbf{tu}um.
+	\switchcolumn
+	%\yb{N}{un} entlässt Du, Herr, Deinen Knecht * nach Deinem Wort in Frieden.
+
+	\yb{D}{enn} meine Augen * haben Dein Heil gesehen.
+\switchcolumn*
+\textbf{Quod} pa\textbf{rás}ti: * ante fáciem ómnium \textbf{po}\textit{pu}\textbf{ló}rum.
+
+Lumen ad revelati\textbf{ó}nem gén\textbf{ti}um: * et glóriam plebis \textbf{tu}\textit{æ} \textbf{Is}raël.
+	\switchcolumn
+	Das Du Bereitet hast * vor dem Angesicht aller Völker.
+
+	Ein Licht zur Erleuchtung der Heiden * und zur Verherrlichung Deines Volkes Israel.
+\switchcolumn*
+Glória \textbf{Pa}tri, et Fí\textbf{li}o, * et Spi\textbf{rí}tu\textit{i} \textbf{Sanc}to.
+	\switchcolumn
+	Ehre sei dem Vater und dem Sohn * und dem Heiligen Geist.
+\switchcolumn*
+Sicut erat in princípio, et \textbf{nunc} et \textbf{sem}per, * et in s\'æcula sæcu\textbf{ló}\textit{rum.} \textbf{A}men.
+	\switchcolumn
+	Wie im Anfang, so auch jetzt und alle Zeit * und in Ewigkeit. Amen.
+\end{psalmus}
+\end{paracol}
+
+\rubric{Es folgt die Antiphone:}
+
+\pars{Antiphon an Ferialtagen}
+
+\vspace{.3em}
+
+\setlength{\columnseprule}{0pt}
+\begin{paracol}{2}\pcb
+%\A Salva nos Dómine vigilantes, custódi nos dormiéntes ut vigilémus cum Christo et requiescámus in pace.
+	\gregorioscore{salva_nos_domine--solesmes_1981_1}
+	\switchcolumn 
+	\A Sei unser Heil, o Herr, wenn wir wachen, und unser Schutz, wenn wir schlafen; damit wir wachen mit Christus und ruhen in seinem Frieden.
+\end{paracol}
+\gresetinitiallines{0}
+\gregorioscore{salva_nos_domine--solesmes_1981_2}
+\gresetinitiallines{1}
+\setlength{\columnseprule{.1pt}
+
+%\pars{Antiphon am Fest Mariä Verkündigung}
+
+%\vspace{.3em}
+
+%\setlength{\columnseprule}{0pt}
+%\begin{paracol}{2}\pcb
+%	\gregorioscore{ecce_concipies_1}
+%	\switchcolumn
+%	\A Siehe, du wirst empfangen und einen Sohn gebären und ihm den Namen Jesus geben, dieser wird groß sein und der Sohn des Höchsten genannt werden.
+%\end{paracol}
+%\gresetinitiallines{0}
+%\gregorioscore{ecce_concipies_2}
+%\gresetinitiallines{1}
+%\setlength{\columnseprule{.1pt}
+
+\hora{Litanei}
+
+\rubric{Danach folgt direkt:}
+
+\begin{paracol}{2} \pcb
+\V Kirieleison.
+\R Cristeileyson.
+\V Kirieleison
+
+\red{P}ater noster. \red{A}ve María. \red{secreto, quibus finitis}
+
+\V Et ne nos indúcas in tentatiónem.
+\R Sed líbera nos a malo.
+
+\V In pace in ídipsum.
+\R Dórmiam et requiescam.
+
+\red{C}redo in Deum. \red{secreto usque ad}
+
+\V Carnis resurrectiónem.
+\R Et vitam ætérnam. Amen.
+	\switchcolumn
+	\V Herr, erbarme Dich. \R Christus, erbarme Dich. \V Herr, erbarme Dich.
+
+	\red{V}ater unser.
+	\red{A}ve Maria. \rubric{man betet still. Danach:}
+
+	\V Und führe uns nicht in Versuchung.
+	\R Sondern erlöse uns von dem Bösen.
+
+	\V In Frieden zugleich.
+	\R Werde ich schlafen und ruhen.
+
+	\red{I}ch glaube an Gott. \rubric{man betet still bis}
+
+	\V Auferstehung des Fleisches.
+	\R Und das ewige Leben. Amen.
+\end{paracol}
+
+%\footnotetext{Vermutlich liegt hier ein Fehler vor. „Et ne nos indúcas“ im Anschluss und die Tatsache, dass das \textit{Ave Maria} an anderen Stellen (siehe auch das Proprium) nach dem \textit{Pater noster} nicht erwähnt wird.}
+
+\hfill\red{\noindent\rule{0.7 \textwidth}{.1pt}}\hfill\null
+
+\pars{Preces}
+
+\vspace{.3em}
+
+\begin{paracol}{2} \pcb
+\V Benedicámus Patrem et Fílium cum Sancto Spíritu.
+\R Laudémus et superexaltémus eum in s\'æcula.
+
+\V Benedíctus es Dómine in firmaménto cæli.
+\R Laudábilis et gloriósus et superexaltátus in s\'æcula.
+
+\V Benedícat et custódiat nos Pater ætérnus.
+\R Amen.
+	\switchcolumn
+	\V Lasst uns preisen den Vater und den Sohn mit dem Heiligen Geist.
+	\R Und sie loben und über alles erheben auf ewig.
+
+	\V Sei gepriesen, o Herr, auf dem Himmelsthrone.
+	\R Und gelobt und gerühmt und über alles erhoben auf ewig.
+
+	\V Es möge uns segnen und beschützen der allmächtige und barmherzige Gott.
+	\R Amen.
+
+\switchcolumn*
+\V Dignáre Dómine nocte ista.
+\R Sine peccáto nos custodíre.
+
+\V Miserére nostri Dómine.
+\R Miserére nostri.
+
+\V Fiat misericórdia tua Dómine super nos.
+\R Quemadmódum sperávimus in te.
+	\switchcolumn
+	\V Würdige Dich, o Herr, in dieser Nacht.
+	\R Uns ohne Sünde zu bewahren.
+
+	\V Erbarme Dich unser, o Herr.
+	\R Erbarme Dich unser.
+
+	\V Es geschehe, o Herr, an uns Dein Erbarmen.
+	\R Wie wir auf Dich vertrauen.
+\end{paracol}
+
+\rubric{Falls die kleinen Preces gesagt werden, werden sie hier eingefügt (siehe Anhang).}
+
+\hfill\red{\noindent\rule{0.7 \textwidth}{.1pt}}\hfill\null
+
+%\vspace{0.3em}
+
+\vspace{0.3em}
+
+\begin{paracol}{2} \pcb
+\V Dómine, Deus virtútum, convérte nos.
+\R Et osténde fáciem tuam et salvi érimus.
+	\switchcolumn
+	\V Herr, Gott, der Mächte bekehre uns.
+	\R Und zeige uns Dein Angesicht und heil werden wir sein.
+\switchcolumn*
+\V Dómine exáudi oratiónem meam.
+\R Et clamor meus ad te véniat.
+
+\V Dóminus vobíscum.
+\R Et cum spíritu tuo.
+
+\oremus
+
+	\switchcolumn
+	\V O Herr, erhöre mein Gebet.
+	\R Und lass mein Rufen zu Dir kommen.
+
+	\DHL
+
+\switchcolumn*
+\y{I}{llúmina} qu\'æsumus Dómine ténebras nostras: et totíus hujus noctis insídias tu a nobis repelle propítius: salva nos omnípotens Pater et lucem tuam nobis concéde perpétuam: et pacem tuam nostris concéde tempóribus. Et nos indígnos fámulos tuos ab omni adversitáte custódi: et ab ecclésia tua cunctam repélle nequítiam.
+Per Dóminum nostrum Jesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia s\'æcula sæculórum.
+\R Amen.
+	\switchcolumn
+	\y{E}{rleuchte}, wir bitten Dich, o Herr, unsere Finsternis: und vertreibe gnädig die Tücken dieser ganzen Nacht: bewahre uns allmächtiger Vater: und gewähre uns Dein ewiges Licht und Deinen Frieden in unserer Zeit: und beschütze uns, Deine unwürdigen Diener vor aller Bedrängnis: und vertreibe von Deiner Kirche alle Verdorbenheit.
+Durch unseren Herrn Jesus Christus, Deinen Sohn, der mit Dir lebt und herrscht in der Einheit des Heiligen Geistes, Gott, von Ewigkeit zu Ewigkeit.
+	\R Amen.
+\end{paracol}
+
+\rubric{Dieses Gebet wird immer gesprochen, solange nicht ein Fest ein anderes vorgibt.}
+
+\hora{Segen}
+
+\begin{paracol}{2}\pcb
+\V Dóminus vobiscum.
+\R Et cum spíritu tuo.
+
+\V Benedicámus Dómino.
+\R Deo grátias.
+	\switchcolumn
+	\DHSME
+
+	%\V Lasset uns danken dem Herrn.
+	%\R Dank sei Gott.
+	\V Singet Lob und Preis.
+	\R Dank sei Gott dem Herrn.
+\switchcolumn*
+\V Et ánimæ ómnium fidélium defunctórum per piam misericórdiam Dei requiéscant in pace.
+\R Amen.
+	\switchcolumn
+	\V Und die Seelen aller verstorbenen Gläubigen mögen durch die milde Barmherzigkeit Gottes in Frieden ruhen.
+	\R Amen.
+\end{paracol}
+
+\null 
+
+\vspace{4em}
+
+\hora{Marianische Antiphon}
+
+\pars{Antiphon im Advent.}
+
+\vspace{.3em}
+
+\setlength{\columnseprule}{0pt}
+\begin{paracol}{2}\pcb
+%\Y{E}{cce} virgo concípies et páries fílium et vocábis nomen ejus Jesum: hic erit magnus et Fílius Altíssimi vocábitur. 
+	\gregorioscore{ecce_virgo_concipies_1}
+	\switchcolumn
+	\yb{S}{iehe} Jungfrau, du wirst empfangen und einen Sohn gebären und ihm den Namen Jesus geben, dieser wird groß sein und der Sohn des Höchsten genannt werden.
+\end{paracol}
+\gresetinitiallines{0}
+\gregorioscore{ecce_virgo_concipies_2}
+\gresetinitiallines{1}
+\setlength{\columnseprule{.1pt}
+
+\begin{paracol}{2} \pcb
+\V Ave María grátia plena Dóminus tecum.
+\R Benedícta tu in muliéribus et benedíctus fructus ventris tui.
+	\switchcolumn
+	\V Gegrüßest seist du Maria voll der Gnade der Herr ist mit dir.
+	\R Du bist gebenedeit unter den Frauen und gebenedeit ist die Frucht deines Leibes.
+\end{paracol}
+
+\pars{Collecta}
+
+\vspace{.3em}
+
+\begin{paracol}{2}\pcb
+\y{D}{eus} qui de beátæ Maríæ vírginis útero verbum tuum ángelo annuntiánte carnem suscípere voluísti: præsta supplícibus tuis, ut qui vere eam Dei genitrícem crédimus, ejus apud te intercessiónibus adjuvémur. Per eúndem Christum Dóminum nostrum. \R Amen.
+	\switchcolumn
+	\y{O}{} Gott, der du beschlossen hast, dass dein Wort gemäß der Botschaft des Engels aus dem Schoß der heiligen Jungfrau Maria einen Leib annehmen sollte, gewähre uns, die wir dich kniefällig anflehen, die Gnade, dass wir, die wir sie in wahrem Sinne als Gottesmutter anerkennen, auf Grund ihrer Fürsprache bei dir eine Hilfe haben. Durch denselben Christus unsern Herrn. \R Amen.
+\end{paracol}
+
+\pagebreak
+\pars{Antiphon von der Geburt des Herrn bis Mariä Reinigung}
+
+\vspace{.3em}
+
+\setlength{\columnseprule}{0pt}
+\begin{paracol}{2}\pcb
+%\Y{E}{cce} María génuit nobis salvatórem, quem Joánnes videns exclamábat dicens: Ecce agnus Dei, ecce qui tollit peccáta mundi, allelúja.
+\gregorioscore{ecce_maria_genuit--solesmes_1}
+	\switchcolumn
+	\yb{O}{} seht doch! Maria hat uns den Erlöser geboren, von dem Johannes beim ersten Anblick verkündigte: Seht das Lamm Gottes, sehet den, der hinwegnimmt die Sünde der Welt, alleluja.
+\end{paracol}
+\gresetinitiallines{0}
+\gregorioscore{ecce_maria_genuit--solesmes_2}
+\gresetinitiallines{1}
+\setlength{\columnseprule{.1pt}
+
+\begin{paracol}{2}\pcb
+\V Post partum virgo invioláta permansísti.
+\R Dei génitrix intercéde pro nobis.
+	\switchcolumn
+	\V Nach der Geburt bist du, Jungfrau, unversehrt geblieben.
+	\R Gottesgebärerin, tritt für uns ein.
+\end{paracol}
+
+\pars{Collecta}
+
+\vspace{.3em}
+
+\begin{paracol}{2}\pcb
+	\y{D}{eus} qui salútis ætérnæ beatæ Maríæ virginitatæ fœcúnda humáno géneri pr\'æmia præstitísti: tríbue qu\'æsumus, ut ipsam pro nobis intercedére sentiámus, per quam meruímus auctórem vitæ suscípere: Dóminum nostrum Jesum Christum. \R Amen.
+	\switchcolumn
+	\y{G}{ott}, der Du durch die fruchtbare Jungfräulichkeit der seligsten Jungfrau Maria dem Menschengeschlecht die Güter des ewigen Heils geschenk hast, gewähre, so bitten wir, dass wir erfahren, wie jene für uns eintritt, durch die wir den Urheber des Lebens empfangen durften, unsern Herrn Jesus Christus, Deinen Sohn. \R Amen.
+\end{paracol}
+
+\pars{Antiphon von Ostern bis zur Oktav von Pfingsten}
+
+\vspace{.3em}
+
+\setlength{\columnseprule}{0pt}
+\begin{paracol}{2}\pcb
+%\Y{R}{egína} cæli lætáre, allelúja: Quia quem meruísti portáre, allelúja: Resurréxit sicut díxit, allelúja: Ora pro nobis Deum, allelúja.
+\gregorioscore{regina_caeli_officium_parvum--vatican_1}
+	\switchcolumn
+	\yb{F}{reu} dich o Himmelskönigin, alleluja. Den du zu tragen würdig warst, alleluja. Ist auferstanden wie er sagte, alleluja. Bitt für uns bei Gott, alleluja.
+\end{paracol}
+\gresetinitiallines{0}
+\gregorioscore{regina_caeli_officium_parvum--vatican_2}
+\gresetinitiallines{1}
+\setlength{\columnseprule{.1pt}
+
+\begin{paracol}{2}\pcb
+\V Gaude Dei génitrix, allelúja.
+\R Quia surréxit Fílius tuus, allelúja.
+	\switchcolumn
+	\V Freu dich o Gottesgebärerin, alleluja.
+	\R Denn dein Sohn ist auferstanden, alleluja.
+\end{paracol}
+
+\pars{Collecta}
+
+\vspace{.3em}
+
+\begin{paracol}{2}\pcb
+\y{P}{rosit} nobis qu\'æsumus omnípotens Pater, et præcípue inter hæc festa paschalia Fílii tui solémnia: continuáta Dei genitrícis et vírginis Maríæ memória: qua et ástitit vulneráta caritáte in cruce pendénti, et nunc astat a dextris in cælo regína regnánti. Eídem Jesu Christo Dómino nostro. \R Amen.
+	\switchcolumn
+	\y{A}{llmächtiger} Vater wir bitten Dich, es sei uns nützlich besonders an diesem feierlichen Osterfest deines Sohnes das beständige Andenken an die Gottesgebärerin und Jungfrau Maria, die mit verwundeter Liebe dem am Kreuze hängenden zur Seite stand und nun dem im Himmel herrschenden zur Rechten als Königin zur Seite steht. Durch denselben Jesus Christus unsern Herrn. \R Amen.
+\end{paracol}
+
+\vspace{3em}
+\pars{Antiphon in allen sonstigen Zeiten}
+
+\vspace{.3em}
+
+{\centering
+\rubric{Das heißt von der Reinigung Mariens bis Ostern und von der Pfingstoktav bis zum Advent.}
+}
+
+\setlength{\columnseprule}{0pt}
+\begin{paracol}{2}\pcb
+%\Y{S}{alve} regína misericórdiæ, vita dulcédo et spes nostra salve. Ad te clamámus éxsules filii evæ, ad te suspirámus geméntes et flentes in hac lacrimárum valle. Eja ergo advocáta nostra illos tuos misericórdes óculos ad nos convérte. Et Jesum benedíctum fructum ventris tui nobis post hoc exílium osténde. O clemens, o pia, o dulcis virgo María.
+\gregorioscore{salve_regina--solesmes_1}
+	\switchcolumn
+	\yb{G}{egrüßest} seist du Königin der Barmherzigkeit. Unser Leben, unsere Süßigkeit und unsere Hoffnung, sei gegrüßt. Zu dir rufen wir, elende Kinder Evas. Zu dir seufzen wir, trauernd und weinend in diesem Tal der Tränen. Wohlann denn unsere Fürsprecherin: Wende deine Barmherzigen Augen uns zu und nach diesem Elend zeige uns Jesu, die gebendeite Frucht deines Leibes. O gütige, o milde, o süße Jungfrau Maria.
+\end{paracol}
+\gresetinitiallines{0}
+\gregorioscore{salve_regina--solesmes_2}
+\gresetinitiallines{1}
+\setlength{\columnseprule{.1pt}
+
+\begin{paracol}{2}\pcb
+\V In omni tribulatióne et angústia nostra.
+\R Succúrre nobis beatíssima virgo María.
+	\switchcolumn
+	\V In all unsrer Not und Drangsal.
+	\R Eil uns zur Hilfe seligste Jungfrau Maria.
+\end{paracol}
+
+\pars{Collecta}
+
+\vspace{.3em}
+
+\begin{paracol}{2}\pcb
+\y{I}{ntervéniat} pro nobis qu\'æsumus Dómine Jesu Christe nunc et in hora mortis nostræ apud tuam cleméntiam gloriosíssima virgo María mater tua, cujus sacratíssimam ánimam in hora passiónis et mortis tuæ gládius dolóris pertransívit. Per ómnia s\'æcula sæculórum. \R Amen.
+	\switchcolumn
+	\y{E}{s} trete für uns ein, so bitten wir Dich, Herr Jesus Christus, jetzt und in der Stunde unseres Todes bei Deiner Güte die glorwürdigste Jungfrau Maria, Deine Mutter, deren heiligster Leib in der Stunde deines Leidens und Todes mit dem Schwert des Schmerzes durchbohrt wurde. Von Ewigkeit zu Ewigkeit. \R Amen.
+\end{paracol}
+
+\pagebreak
+\mensii{Preces minores}
+\addcontentsline{toc}{section}{Preces minores}
+\chead{Preces minores}
+
+\vspace{.5em}
+
+\begin{paracol}{2}\pcb
+\V Ego dixi Dómine, miserére mei.
+\R Sana ánimam meam, quia peccávi tibi.
+	\switchcolumn 
+	\V Ich sprach, o Herr, erbarme Dich meiner.
+	\R Heile meine Seele, denn ich habe Dir gesündigt.
+\switchcolumn*
+\V Dómine, avérte fáciem tuam a peccátis meis.
+\R Et omnes iniquitátes meas dele.
+	\switchcolumn 
+	\V Herr, wende ab Dein Angesicht von meinen Sünden.
+	\R Und entferne all mein Unrecht.
+\switchcolumn*
+\V Convértere Dómine úsquequo.
+\R Et deprecábilis esto super servos tuos.
+	\switchcolumn 
+	\V Wende Dich uns zu, Herr, wie lange noch willst Du zögern? 
+	\R Und lass Dich gnädig stimmen über Deine Diener.
+\switchcolumn*
+\V Fiat misericórdia tua, Dómine, super nos.
+\R Quemadmódum sperávimus in te.
+	\switchcolumn 
+	\V Lass Deine Huld, Herr, über uns kommen.
+	\R Wie wir auf Dich gehofft haben.
+\switchcolumn *
+%\hfill\red{O}rémus pro omni gradu ecclésiæ.\hfill\null
+\V Orémus pro omni gradu ecclésiæ.
+	\switchcolumn
+	\V Lasst uns für alle Stände der Kirche beten.
+\switchcolumn *
+\V Sacerdótes tui induántur iustítia.
+\R Et Sancti tui exsúltent.
+	\switchcolumn
+	\V Deine Priester mögen sich in Gerechtigkeit hüllen.
+	\R Und Deine Heiligen mögen jauchzen.
+\switchcolumn*
+\V Pro rege nostro.
+
+\V Dómine, salvum fac regem.
+\R Et exáudi nos in die qua invocavérimus te.
+	\switchcolumn
+	\V Für unseren König. 
+
+	\V Herr, erhalte den König.
+	\R Und erhöre uns am Tag, da wir zu Dir flehen.
+\switchcolumn*
+\V Pro antistite nostro.
+\R Dóminus consérvet eum et omnes sibi comíssos.
+	\switchcolumn
+	\V Für unseren Bischof.
+	\R Der Herr möge ihn bewahren und alle ihm anvertraute.
+\switchcolumn*
+\V Pro omni congregatióne nostra.
+\R Memor esto congregatiónis tuæ quam possedísti ab inítio.	
+	\switchcolumn
+	\V Für unsere ganze Gemeinde.
+	\R Gedenke Deiner Gemeinde, die Du von jeher als Besitz gehabt hast.
+\switchcolumn*
+\V Pro cuncto pópulo cathólico.
+
+\V Salvum fac pópulum tuum, Dómine, et bénedic hereditáti tuæ.
+\R Et rege eos et extólle illos usque in ætérnum.
+	\switchcolumn 
+	\V Für das ganze katholische Volk.
+
+	\V Mach heil, o Herr, Dein Volk, und segne Dein Erbe.
+	\R Und leite es und erhebe es bis in Ewigkeit.
+\switchcolumn*
+\V Fiat pax in virtúte tua.
+\R Et abundántia in túrribus tuis.
+	\switchcolumn 
+	\V Möge Frieden sein in Deiner Kraft.
+	\R Und Überfluss in Deinen Türmen.
+\switchcolumn*
+\V Pro infírmis et captívis.
+\R Líbera eos Deus Israel ex ómnibus tribulatiónibus suis.
+	\switchcolumn
+	\V Für die Kranken und Gefangenen.
+	\R Befreie sie, Gott Israels, aus allen ihren Nöten.
+\switchcolumn*
+\V Pro fidélibus defúnctis.
+
+\V Réquiem ætérnam dona eis Dómine.
+\R Et lux perpétua luceat eis.
+
+\V Requiéscant in pace.
+\R Amen.
+	\switchcolumn 
+	\V Für die verstorbenen Gläubigen.
+
+	\V Herr, schenke ihnen die ewige Ruhe.
+	\R Und das ewige Licht leuchte ihnen.
+
+	\V Lass sie ruhen in Frieden.
+	\R Amen.
+\switchcolumn* 
+\V Pro frátribus et soróribus nostris abséntibus.
+\R Salvos fac servos et ancíllas tuas, Deus meus, sperántes in te.
+	\switchcolumn 
+	\V Für unsere abwesenden Brüder und Schwestern.
+	\R Erhalte Deine Diener und Dienerinnen, mein Gott, die auf Dich hoffen.
+\switchcolumn*
+\V Mitte eis Dómine auxílium de sancto.
+\R Et de Sion túere eos.
+	\switchcolumn 
+	\V Schicke ihnen, Herr, Hilfe vom Heiligtum.
+	\R Und von Sion aus beschütze sie.
+\switchcolumn*
+\V Esto nobis Dómine, turris fortitúdinis.
+\R A fácie inimíci.
+	\switchcolumn 
+	\V Sei uns, Herr, ein Turm der Stärke. 
+	\R Vor dem Antlitz des Feindes.
+\switchcolumn*
+\V Dómine, exáudi oratiónem meam.
+\R Et clamor meus ad te véniat.
+
+\hfill\red{O}rémus.\hfill\null
+\switchcolumn
+	\V O Herr, erhöre mein Gebet.
+	\R Und lass mein Rufen zu Dir kommen.
+
+	\hfill\red{L}asset uns beten.\hfill\null
+\end{paracol}
+
+\pars{Psalm 50}
+
+\vspace{.3em}
+
+\begin{paracol}{2} \pcb
+\begin{psalmus}
+\Yii{M}{iserére} mei, Deus, * secúndum magnam misericórdiam tuam.
+
+Et secúndum multitúdinem miseratiónum tuárum, * dele iniquitátem meam.
+
+Ámplius lava me ab iniquitáte mea: * et a peccáto meo munda me.
+\switchcolumn
+\yb{E}{rbarme} Dich meiner, o Gott, * in Deinem großen Erbarmen.
+
+Und in Deiner unendlichen Huld, * tilge meine Sünde.
+
+O wasch und wasche mich von meiner Schuld, * von meiner Sünde mache mich rein.
+\switchcolumn*
+Quóniam iniquitátem meam ego cognósco: * et peccátum meum contra me est semper.
+
+Tibi soli peccávi, et malum coram te feci: * ut iustificéris in sermónibus tuis, et vincas cum iudicáris.
+\switchcolumn
+Denn mein Unrecht habe ich erkannt; * und meine Sünde steht mir stets vor Augen.
+
+Dir allein habe ich gesündigt und habe gegen Dich Böses getan, * auf dass Du recht handelst in Deinen Worten und siegst, wenn Du gerichtet wirst.
+\switchcolumn*
+Ecce enim, in iniquitátibus concéptus sum: * et in peccátis concépit me mater mea.
+\switchcolumn
+Siehe, in Unrecht wart ich empfangen; * in Sünden hat mich empfangen meine Mutter.
+\switchcolumn*
+Ecce enim, veritátem dilexísti: * incérta et occúlta sapiéntiæ tuæ manifestásti mihi.
+\switchcolumn
+Siehe, Wahrheit hast du geliebt; * unsichere und geheime Pläne deiner Weisheit hast Du mir offenbart.
+\switchcolumn*
+Aspérges me hyssópo, et mundábor: * lavábis me, et super nivem dealbábor.
+\switchcolumn
+Besprenge mich mit dem Ysopbüschel und ich werde rein; * wasche mich, und ich werde weißer als Schnee.
+\switchcolumn*
+Audítui meo dabis gáudium et lætítiam: * et exsultábunt ossa humiliáta.
+\switchcolumn
+Meinem Gehör wirst Du geben Wonne und Freude * und jauchzen werden meine erniedrigten Glieder.
+\switchcolumn*
+Avérte fáciem tuam a peccátis meis: * et omnes iniquitátes meas dele.
+
+Cor mundum crea in me, Deus: * et spíritum rectum ínnova in viscéribus meis.
+\switchcolumn
+Wende ab Dein Angesicht von meinen Sünden, * und entferne all mein Unrecht.
+
+Ein reines Herz erschaff in mir, o Gott, * und den rechten Sinn erneure in meinem Fleische.
+\switchcolumn*
+Ne proícias me a fácie tua: * et spíritum sanctum tuum ne áuferas a me.
+\switchcolumn
+Verwirf mich nicht gänzlich von deinem Angesicht, * und Deinen heiligen Geist entreiß mir nicht.
+\switchcolumn*
+Redde mihi lætítiam salutáris tui: * et spíritu principáli confírma me.
+
+Docébo iníquos vias tuas: * et ímpii ad te converténtur.
+\switchcolumn
+Gib mir zurück die Freude deines Heils, * bestärk mir den ursprünglichen Geist.
+
+Den Sündern will ich Deine Wege lehren; * auf dass die Übeltäter sich zu Dir bekehren.
+\switchcolumn*
+Líbera me de sanguínibus, Deus, Deus salútis meæ: * et exsultábit lingua mea iustítiam tuam.
+
+Dómine, lábia mea apéries: * et os meum annuntiábit laudem tuam.
+
+Quóniam si voluísses sacrifícium, dedíssem útique: * holocáustis non delectáberis.
+
+Sacrifícium Deo spíritus contribulátus: * cor contrítum, et humiliátum, Deus, non despícies.
+\switchcolumn
+Befrei mich aus allem Greuel, Gott, o Gott meines Heils, * dann wird meine Zunge deine Gerechtigkeit bejubeln.
+
+Herr, öffne meine Lippen, * damit mein Mund Dein Lob verkünde.
+
+Denn wenn Opfer Du verlangtest, würde ich ich sie um alles geben; * doch durch Brandopfer wirst Du nicht erfreut.
+
+Ein Opfer zu Gott ist ein zerknirschter Geist; * ein zerknirschtes und gedemütigtes Herz wirst Du, Herr, nicht von dir weisen.
+\switchcolumn*
+Benígne fac, Dómine, in bona voluntáte tua Sion: * ut ædificéntur muri Jerúsalem.
+
+Tunc acceptábis sacrifícium iustítiæ, oblatiónes, et holocáusta: * tunc impónent super altáre tuum vítulos.
+\switchcolumn
+Segne in deiner Huld den Sion, * auf dass die Mauern Jerusalem neu erbaut werden.
+
+Dann sollst du Opfer haben der Gerechtigkeit, Darbringungen und Brandopfer, * dann wird man auf Deinen Altar die Kälber legen.
+\switchcolumn*
+Glória Patri, et Fílio, * et Spirítui Sancto.
+	\switchcolumn
+	Ehre sei dem Vater und dem Sohn * und dem Heiligen Geist.
+\switchcolumn*
+Sicut erat in princípio, et nunc et semper, * et in s\'æcula sæculórum. Amen.
+	\switchcolumn
+	Wie im Anfang, so auch jetzt und alle Zeit * und in Ewigkeit. Amen.
+\end{psalmus}
+\end{paracol}
+
+\red{Antiphon außerhalb von Septuagesima} Alleluia.
+
+\rubric{Vom Sonntag Septuagesima bis zum Osterfest lautet die Antiphon:}
+
+\begin{paracol}{2}\pcb
+\A Laus tibi domine rex eterne glorie.
+	\switchcolumn 
+	\A Lob sei dir, Herr, König der ewigen Herrlichkeit.
+\end{paracol}
+
+\begin{paracol}{2}\pcb
+\V Exsúrge Dómine, ádjuva nos.
+\R Et líbera nos propter nomen sanctum tuum.
+	\switchcolumn
+	\V Erhebe Dich, Herr, hilf uns.
+	\R Und befreie uns, um Deines heiligen Namens willen.
+\switchcolumn*
+\V Dómine, Deus virtútum, convérte nos.
+\R Et osténde fáciem tuam et salvi érimus.
+	\switchcolumn
+	\V Herr, Gott, der Mächte bekehre uns.
+	\R Und zeige uns Dein Angesicht und heil werden wir sein.
+\switchcolumn*
+\V Dómine exáudi oratiónem meam.
+\R Et clamor meus ad te véniat.
+
+\DVO
+	\switchcolumn
+	\V O Herr, erhöre mein Gebet.
+	\R Und lass mein Rufen zu Dir kommen.
+
+	\DHL
+\end{paracol}
+
+\rubric{Danach folgt das Gebet aus dem Psalterium oder Proprium.}
+
+\vfill
+
+\null
+
+
+\end{document}
